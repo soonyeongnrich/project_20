@@ -1,0 +1,77 @@
+html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+	  text-align:center;
+    }
+
+    .slider {
+        width: 1200px;
+        margin: 100px auto;
+		height:600px;/*높이가 자꾸 변동되어 문제가 생기므로 반드시 px단위로 고정해주세요*/
+    }
+
+    .slick-slide {
+      
+	  position:relative;
+	  background:white;
+	  opacity:0.2;
+	  
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color:#6d76c7;
+    }
+
+
+    .slick-slide {
+	  height:600px;/*글씨까지 넣은 div높이를 넣어주세요! (확대된것 말고 뒤에있는 div높이)*/
+      transition: all ease-in-out 0.3s;/*움직임 정도 시간 조절하는 부분*/
+      opacity: .2;
+	  position:relative;
+    }
+	
+	
+
+    
+    .slick-active {/*나머지 사진 부분의 css*/
+	  position:relative;
+	  opacity: .5;
+    }
+
+    .slick-current {/*중간 사진 부분의 css*/
+		opacity: 1;
+		transform:scale(1.2,1.2);
+		margin-top:100px;
+		position:relative;
+		z-index:50;
+    }
+
+	
+
+/* 아래점 스타일*/
+.slick-dots{ 
+	text-align: center;
+}
+.slick-dots li{
+  display: inline-block; 
+  margin: 0 5px;
+  width:40px;
+  height:10px;
+  background:#ccc;
+  color:#ddd;
+}
+
+.slick-dots li button {width:100%; height:100%;}
+.slick-dots li button:before{content:"";
+	width:100%;
+	height:100%;}
+
